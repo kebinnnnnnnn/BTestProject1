@@ -18,12 +18,12 @@ class PostsController extends Controller {
 	function add() {
 		$todo = $_POST['todo'];
 		$this->set('title','Success - Feed');
-		$this->set('todo',$this->Post->query('insert into items (item_name) values (\''.mysql_real_escape_string($todo).'\')'));	
+		$this->set('todo',$this->Post->query('insert into posts (item_name) values (\''.mysql_real_escape_string($todo).'\')'));	
 	}
 	
 	function delete($id = null) {
 		$this->set('title','Success -Feed');
-		$this->set('todo',$this->Post->query('delete from items where id = \''.mysql_real_escape_string($id).'\''));	
+		$this->set('todo',$this->Post->query('delete from posts where id = \''.mysql_real_escape_string($id).'\''));	
 	}
 
 }
