@@ -38,7 +38,10 @@ class UsersController extends Controller {
 
 		$loginDetails = $_POST['loginDetails'];
 
+		$columns = array();
+		$values = array();
 		
+		//$this->User->selectByWhere()
 
 	}
 
