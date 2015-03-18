@@ -67,10 +67,14 @@ function callHook() {
 	$dispatch = new $controller($model,$controllerName,$action);
 
 	if ((int)method_exists($controller, $action)) {
-		call_user_func_array(array($dispatch,$action),$queryString);
+			call_user_func_array(array($dispatch,$action),$queryString);
 	} else {
-		/* Error Generation Code Here */
+			 header('Location: '. 'http://localhost/BTestProject1/'.$controllerName.'/viewall');
 	}
+
+	
+
+	
 }
 
 /** Autoload any classes that are required **/
